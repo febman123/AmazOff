@@ -1,0 +1,11 @@
+{
+  "id": "com.amazoff.patcher",
+  "version": "0.1.0",
+  "vendor": "amazoff",
+  "type": "web",
+  "main": "index.html",
+  "title": "Amazoff",
+  "icon": "amazoff.png",
+  "largeIcon": "amazoffLarge.png",
+  "iconColor": "#000000"
+}
