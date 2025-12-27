@@ -6,10 +6,10 @@
 
 ## Overview
 
-**AmazOff** is an IPK application for **rooted LG webOS TVs**.  
-It operates directly on the preinstalled Amazon app and applies reversible modifications to alter its runtime behavior.
+**AmazOff** is an IPK application for **rooted LG webOS TVs**. It modifies the Amazon Prime Video Player with following patches applied:
+- Remove Ads (Pre-, Mid- and Endrolls)
+- Suppress telemetry
 
-The patch is applied **in-place** on the default Amazon app.  
 As a result, all launch paths—including the **remote control’s dedicated Amazon button**—will open the modified version.
 
 AmazOff requires **[Homebrew Channel](https://www.webosbrew.org/)** to be present and functional.
@@ -37,31 +37,16 @@ This avoids manual packaging, signing, or SSH interaction.
 ## Usage
 
 1. Launch **AmazOff**
-2. Choose one of the two available actions:
-   - **Patch**
-   - **Unpatch**
-3. Observe output in the built-in log view
+2. Run **Patch**
+3. Observe output in the built-in log view.
+4. Launch the Amazon Prime Video App. A Popup-message should appear showing the patch loading state.
 
 Notes:
-- The app may close immediately after a patch or revert operation.  
-  This behavior is expected. Log is persistent, you can check by reopening.
+- The app may close immediately after a patch or unpatch operation.  
+  This behavior is expected. Log is persistent, you can check the actions outcome by reopening the patcher.
 - A successful patch is confirmed by a **toast notification** when the Amazon app is launched.
 
-No configuration, profiles, or persistence layers exist yet.  
-The app performs direct apply / undo operations only.
+## Development Notes
 
-## Behavior Summary
-
-- Operates on the **existing** Amazon app installation  
-- Modifies runtime behavior without / modifying the app directly  
-- Fully reversible through the same interface  
-- No external files or settings  
-- No background services  
-
-## Risks and Warnings
-
-- Modifications may be detectable by Amazon-side integrity or behavior checks
-- Future Amazon app updates may invalidate patches
-- No guarantees of compatibility across regions or versions
-- Use on production devices carries inherent risk
+The most convenient way to see the modifications is to js-beautify the nginx-delivered .js file and diff with the original source. 
 
