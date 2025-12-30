@@ -17,8 +17,8 @@ AmazOff requires **[Homebrew Channel](https://www.webosbrew.org/)** to be presen
 ## Status
 
 - **Development stage:** early / experimental  
-- **Tested on:** webOS 4.x  
-- **Amazon app variants:** 4.1.15  
+- **Tested on:** webOS 6.5.0  
+- **Amazon app variants:** x.x.xx  
 
 ## Requirements
 
